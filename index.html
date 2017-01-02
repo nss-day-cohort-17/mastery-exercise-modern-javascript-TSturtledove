@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RoboBattle</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+
+<!--
+I need two input fields for names and each of those gets a selection bar for
+robo type.
+
+then we can follow the same basic battle line up. -->
+
+
+  <article id="game-container">
+
+    <section id="player-setup" class="card card--name ">
+      <div class="card__prompt">
+        <div>Please input your name and the name of your opponent</div>
+        <div class="field">
+          <input type="text" autofocus="true" id="pcName" class="field__textinput">
+          <div>
+              <label id="unit">Unit type:</label>
+              <select name="unitType">
+                  <optgroup label="unit">
+                    <option value="fox">Fox</option>
+                    <option value="weasel">Weasel</option>
+                    <option value="sparrow">Sparrow</option>
+                    <option value="hawk">Hawk</option>
+                    <option value="tortoise">Tortoise</option>
+                    <option value="porcupine">Porcupine</option>
+                  </optgroup>
+                  </select>
+          </div>
+
+          <input type="text" id="aiName" class="field__textinput">
+          <div>
+              <label id="unit">Unit type:</label>
+              <select name="unitType">
+                  <optgroup label="unit">
+                    <option value="fox">Fox</option>
+                    <option value="weasel">Weasel</option>
+                    <option value="sparrow">Sparrow</option>
+                    <option value="hawk">Hawk</option>
+                    <option value="tortoise">Tortoise</option>
+                    <option value="porcupine">Porcupine</option>
+                  </optgroup>
+                  </select>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card__button">
+        <a class="card__link btn btn--big btn--orange"
+           href="#"
+           next="card--class">
+          <span class="btn__text forward">Initialize combat</span>
+
+        </a>
+      </div>
+    </section>
+
+
+    <section id="battleground" class="card card--battleground">
+      <div class="card__prompt container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div id="playerCard">
+              --your name <br>
+              class <br>
+              weapon <br>
+              stats--
+            </div>
+            <div id="battleReport"></div>
+            <div id="attackButton" class="card__button">
+              <a class="btn btn--big btn--orange"
+                 href="#"
+                 next="card--class">
+                <span class="btn__prompt">></span>
+                <span class="btn__text"> Attack enemy!</span>
+              </a><br>
+            </div>
+            <div id="enemyCard">
+              --enemy <br>
+              class <br>
+              weapon <br>
+              stats--
+            </div>
+            <div id="gameOver"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="frame.js"></script>
+  <script src="robotypes.js"></script>
+  <script src="operation.js"></script>
+
+</body>
+</html>
