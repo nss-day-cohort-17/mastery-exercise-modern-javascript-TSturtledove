@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>RoboBattle</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
@@ -21,11 +21,11 @@ then we can follow the same basic battle line up. -->
 
   <article id="game-container">
 
-    <section id="player-setup" class="card card--name ">
-      <div class="card__prompt">
+    <section id="firstpage" class="card">
+      <div class="maintext">
         <div>Please input your name and the name of your opponent</div>
         <div class="field">
-          <input type="text" autofocus="true" id="pcName" class="field__textinput">
+          <input type="text" autofocus="true" id="pcName" class="">
           <div>
               <label class="unit">Unit type:</label>
               <select id="unit01Type">
@@ -38,7 +38,7 @@ then we can follow the same basic battle line up. -->
                   </select>
           </div>
 
-          <input type="text" id="aiName" class="field__textinput">
+          <input type="text" id="aiName" class="">
           <div>
               <label class="unit">Unit type:</label>
               <select id="unit02Type">
@@ -54,18 +54,18 @@ then we can follow the same basic battle line up. -->
         </div>
       </div>
 
-      <div class="card__button">
-        <a class="card__link btn btn--big btn--orange"
+      <div class="changebutton">
+        <a class="advance btn btn--big btn--orange"
            href="#"
-           next="card--battleground">
+           next="testfield">
           <span class="btn__text forward">Initialize combat</span>
         </a>
       </div>
     </section>
 
 
-    <section id="battleground" class="card card--battleground">
-      <div class="card__prompt container-fluid">
+    <section id="battleground" class="card testfield">
+      <div class="maintext container-fluid">
         <div class="row">
           <div class="col-md-4 col-md-offset-4">
             <div id="pcUnitInfo">
@@ -75,11 +75,10 @@ then we can follow the same basic battle line up. -->
               stats--
             </div>
             <div id="damageReport"></div>
-            <div id="attackButton" class="card__button">
+            <div id="attackButton" class="changebutton">
               <a class="btn btn--big btn--orange"
-                 href="#"
-                 next="card--class">
-                <span class="btn__text"> Engage in Conflict</span>
+                 href="#">
+                <span class="btn__text">Engage in Conflict</span>
               </a><br>
             </div>
             <div id="aiUnitInfo">
@@ -96,7 +95,7 @@ then we can follow the same basic battle line up. -->
 
   </article>
 
-  <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="frame.js"></script>
   <script src="robotypes.js"></script>
   <script src="operation.js"></script>

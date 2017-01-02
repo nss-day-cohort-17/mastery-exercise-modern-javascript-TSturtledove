@@ -1,19 +1,24 @@
 /*
   Section styles
  */
+ body {
+  font-family: 'VT323', monospace;
+ }
+
+
 .card {
   display: none;
 }
 
-.card__prompt {
-  font-size: 1.1em;
+.maintext {
+  font-size: 2em;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
 
-.card__button {
-  font-size: 1.1em;
+.changebutton {
+  font-size: 2em;
   margin: 30px 0 0 0;
   text-align: center;
 }

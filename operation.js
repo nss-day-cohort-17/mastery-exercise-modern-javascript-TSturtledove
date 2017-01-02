@@ -30,14 +30,14 @@ $(".forward").click(function setName () {
 });
 
 
-$("#player-setup").show();
+$("#firstpage").show();
 
-$(".card__link").click(function() {
+$(".advance").click(function() {
   var nextCard = $(this).attr("next");
   var moveAlong = false;
 
   switch (nextCard) {
-    case "card--battleground":
+    case "testfield":
       moveAlong = ($("#pcName").val() && $("#aiName") !== "");
       break;
   }
@@ -55,7 +55,7 @@ function damage(){
 
 $("#attackButton").click( function () {
   damage();
-  if (unit01Health && unit02Health > 0){
+  if (unit01Health > 0 && unit02Health > 0){
     $("#pcUnitInfo").html(`<h4>Unit Name: ${unit01.name} </h4> <h4>Unit Health: ${unit01Health} </h4>`)
     $("#aiUnitInfo").html(`<h4>Unit Name: ${unit02.name} </h4> <h4>Unit Health: ${unit02Health} </h4>`)
     $("#damageReport").html(`<h4>Unit ${unit01.name} has suffered ${unit02Attack} points of damage</h4>
