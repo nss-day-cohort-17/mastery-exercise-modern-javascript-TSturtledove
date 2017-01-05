@@ -20,8 +20,8 @@ $(".forward").click(function setName () {
   console.log(unit01);
   unit02.name = $("#aiName").val();
   console.log(unit02)
-  $("#pcUnitInfo").html(`<h4>Unit Name: ${unit01.name} </h4> <h4>Unit Health: ${unit01.health} </h4>`)
-  $("#aiUnitInfo").html(`<h4>Unit Name: ${unit02.name} </h4> <h4>Unit Health: ${unit02.health} </h4>`)
+  $("#pcUnitInfo").html(`<h4>Unit Name: ${unit01.name} </h4> <h4>Unit Type: ${unit01.type}</h4> <h4>Unit Health: ${unit01.health} </h4>`)
+  $("#aiUnitInfo").html(`<h4>Unit Name: ${unit02.name} </h4> <h4>Unit Type: ${unit02.type}</h4> <h4>Unit Health: ${unit02.health} </h4>`)
   unit01Attack = unit01.attackstr;
   unit02Attack = unit02.attackstr;
 
@@ -56,8 +56,8 @@ function damage(){
 $("#attackButton").click( function () {
   damage();
   if (unit01Health > 0 && unit02Health > 0){
-    $("#pcUnitInfo").html(`<h4>Unit Name: ${unit01.name} </h4> <h4>Unit Health: ${unit01Health} </h4>`)
-    $("#aiUnitInfo").html(`<h4>Unit Name: ${unit02.name} </h4> <h4>Unit Health: ${unit02Health} </h4>`)
+    $("#pcUnitInfo").html(`<h4>Unit Name: ${unit01.name} </h4> <h4>Unit Type: ${unit01.type}</h4><h4>Unit Health: ${unit01Health} </h4>`)
+    $("#aiUnitInfo").html(`<h4>Unit Name: ${unit02.name} </h4> <h4>Unit Type: ${unit02.type}</h4><h4>Unit Health: ${unit02Health} </h4>`)
     $("#damageReport").html(`<h4>Unit ${unit01.name} has suffered ${unit02Attack} points of damage</h4>
                               <h4>Unit ${unit02.name} has suffered ${unit01Attack} points of damage</h4>`)
 

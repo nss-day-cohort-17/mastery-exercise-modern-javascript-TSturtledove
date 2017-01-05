@@ -3,6 +3,7 @@
 frame.base = function() {
   this.health = this.health + 10;
   this.attackstr = this.attackstr + 15;
+  this.type = "All-rounder"
 };
 frame.base.prototype = new frame.basic();
 // fox add Math.random()*20 + 60 health Math.random()*12 + 30 attack
@@ -22,6 +23,7 @@ frame.weasel.prototype = new frame.base();
 frame.flight = function() {
   this.health = this.health + 5;
   this.attackstr = this.attackstr + 20;
+  this.type = "Flyer"
 };
 frame.flight.prototype = new frame.basic();
 // sparrow add Math.random()*5 +30 health Math.random()*25 + 45 attack
@@ -41,6 +43,7 @@ frame.hawk.prototype = new frame.flight();
 frame.armored = function() {
   this.health = this.health + 20;
   this.attackstr = this.attackstr + 5;
+  this.type = "Armored"
 };
 frame.armored.prototype = new frame.basic();
 // tortoise add Math.random()*30 + 70 health Math.random()*5 + 15 attack
