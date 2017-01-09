@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>RoboBattle</title>
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+
+
+<!--
+I need two input fields for names and each of those gets a selection bar for
+robo type.
+
+then we can follow the same basic battle line up. -->
+
+
+  <article id="game-container">
+
+    <section id="firstpage" class="card">
+      <div class="maintext">
+        <div>Please input your name and the name of your opponent</div>
+        <div class="field">
+          <input type="text" autofocus="true" id="pcName" class="">
+          <div>
+              <label class="unit">Unit type:</label>
+              <select id="unit01Type">
+                    <option value="fox">Fox</option>
+                    <option value="weasel">Weasel</option>
+                    <option value="sparrow">Sparrow</option>
+                    <option value="hawk">Hawk</option>
+                    <option value="tortoise">Tortoise</option>
+                    <option value="porcupine">Porcupine</option>
+                  </select>
+          </div>
+
+          <input type="text" id="aiName" class="">
+          <div>
+              <label class="unit">Unit type:</label>
+              <select id="unit02Type">
+                    <option value="fox">Fox</option>
+                    <option value="weasel">Weasel</option>
+                    <option value="sparrow">Sparrow</option>
+                    <option value="hawk">Hawk</option>
+                    <option value="tortoise">Tortoise</option>
+                    <option value="porcupine">Porcupine</option>
+                  </select>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="changebutton">
+        <a class="advance btn btn--big btn--orange"
+           href="#"
+           next="testfield">
+          <span class="btn__text forward">Initialize combat</span>
+        </a>
+      </div>
+    </section>
+
+
+    <section id="battleground" class="card testfield">
+      <div class="maintext container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-4">
+            <div id="pcUnitInfo">
+              --your name <br>
+              class <br>
+              weapon <br>
+              stats--
+            </div>
+            <div id="damageReport"></div>
+            <div id="attackButton" class="changebutton">
+              <a class="btn btn--big btn--orange"
+                 href="#">
+                <span class="btn__text">Engage in Conflict</span>
+              </a><br>
+            </div>
+            <div id="aiUnitInfo">
+              --enemy <br>
+              class <br>
+              weapon <br>
+              stats--
+            </div>
+            <div id="repeatButton"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="frame.js"></script>
+  <script src="robotypes.js"></script>
+  <script src="operation.js"></script>
+
+</body>
+</html>
